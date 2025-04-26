@@ -29,6 +29,11 @@ import java.util.ResourceBundle;
 
 public class DB_GUI_Controller implements Initializable {
 
+    public Label statusLabel;
+    public Button clrBtn;
+    public Button addBtn;
+    public Button delBtn;
+    public Button editBtn;
     @FXML
     TextField first_name, last_name, department, major, email, imageURL;
     @FXML
@@ -151,12 +156,20 @@ public class DB_GUI_Controller implements Initializable {
     @FXML
     protected void selectedItemTV(MouseEvent mouseEvent) {
         Person p = tv.getSelectionModel().getSelectedItem();
-        first_name.setText(p.getFirstName());
-        last_name.setText(p.getLastName());
-        department.setText(p.getDepartment());
-        major.setText(p.getMajor());
-        email.setText(p.getEmail());
-        imageURL.setText(p.getImageURL());
+        if(p != null) {
+            editBtn.setStyle("-fx-background-color: #a73; ");
+            delBtn.setStyle("-fx-background-color: #a73");
+            first_name.setText(p.getFirstName());
+            last_name.setText(p.getLastName());
+            department.setText(p.getDepartment());
+            major.setText(p.getMajor());
+            email.setText(p.getEmail());
+            imageURL.setText(p.getImageURL());
+        }
+        else{
+            editBtn.setStyle("-fx-background-color: #808080; ");
+            delBtn.setStyle("-fx-background-color: #808080");
+        }
     }
 
     public void lightTheme(ActionEvent actionEvent) {
