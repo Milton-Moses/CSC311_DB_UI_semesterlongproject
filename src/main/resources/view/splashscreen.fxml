@@ -10,11 +10,11 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <children>
-      <ImageView fitHeight="316.0" fitWidth="459.0" pickOnBounds="true" preserveRatio="true"  >
-       <image>
+    <children>
+        <ImageView fitHeight="316.0" fitWidth="459.0" pickOnBounds="true" preserveRatio="true"  >
+            <image>
                 <Image url="@../images/fsclogo.png" />
-       </image>
-      </ImageView>
-   </children>
+            </image>
+        </ImageView>
+    </children>
 </VBox>
